@@ -1,0 +1,13 @@
+## To pass in args that equal something. Use that value without having to shift, sed, awk.
+ while [[ $# -gt 0 ]]; do
+   thisArg="$1"
+   case ${thisArg} in
+     example=*)
+       thisExample="${thisArg#*=}"
+       ;;
+     -help|--help|help|-h|--h|*)
+       exit 0
+       ;;
+   esac
+   shift
+ done

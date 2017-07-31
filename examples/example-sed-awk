@@ -1,0 +1,5 @@
+## AWK - Remove or blank out one or more columns prior to printing
+ awk '{$4="";print$0}'
+ awk '{$4=$5="";print$0}'
+## SED - Replace 2 or more spaces with 1 space
+ sed 's/ \+/ /g'
