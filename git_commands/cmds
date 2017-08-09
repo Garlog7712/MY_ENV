@@ -4,3 +4,20 @@
 ## Delete local branch
  git branch -d <BranchName>
  git branch -D <BranchName> **Force option
+
+## Delete branch from origin
+ git push origin --delete <branch_name>
+
+## Delete local that don't exist on remote
+ git remote prune origin
+
+## Rename a tag
+ git tag <new> <old>
+ git tag -d <old>
+ git push origin :refs/tags/<old>
+ git push --tags
+
+## Rename a branch
+ git branch -m <old-name> <new-name>
+ git push origin :<old-name> <new-name>
+ git push origin -u <new-name>
